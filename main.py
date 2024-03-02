@@ -2,13 +2,10 @@ import requests
 
 link = 'https://api.scratch.mit.edu/accounts/checkusername/'
 count = 0
-
-file = open("list", "r")
-data = file.read()
-words = data.split("\n")
-file.close()
-
 free = []
+
+with open("list", "r") as file:
+    words = file.read().split("\n")
 
 def writefree():
     with open('output', 'w') as file:
