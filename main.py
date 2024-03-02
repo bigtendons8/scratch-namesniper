@@ -17,13 +17,13 @@ try:
         s = requests.Session()
         r = s.get(link+word)
         if r.json()['msg'] == 'valid username':
-            print(f"{word}: available")
-            free.append(f"{word}\n")
+            print(word + ": free")
+            free.append(word + '\n')
+            count += 1
+            print(str(count) + '/' + str(len(words)) + 'complete. ' + str(len(free)) + ' names found.')
         else:
-            print(f"{word}: unavailable")
-
-    count += 1
-    print(str(count) + '/' + str(len(words)) + 'complete. ' + str(len(free)) + ' names found.')
+            count += 1
+            print(str(count) + '/' + str(len(words)) + 'complete. ' + str(len(free)) + ' names found.')
 except KeyboardInterrupt:
     writefree()
     raise SystemExit
