@@ -18,10 +18,8 @@ free = []
 #random.shuffle(words)
 
 def writefree():
-    file = open('output', 'a')
-    file = open('output', 'w')
-    file.writelines(free)
-    file.close()
+    with open('output', 'w') as file:
+        file.writelines(free)
 
 
 try:
