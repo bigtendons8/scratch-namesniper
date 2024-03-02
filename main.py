@@ -1,5 +1,4 @@
 import requests
-#import random
 
 link = 'https://api.scratch.mit.edu/accounts/checkusername/'
 count = 0
@@ -9,13 +8,7 @@ data = file.read()
 words = data.split("\n")
 file.close()
 
-#OR
-
-#words = []
-
 free = []
-
-#random.shuffle(words)
 
 def writefree():
     with open('output', 'w') as file:
