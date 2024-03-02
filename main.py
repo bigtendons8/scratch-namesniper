@@ -22,7 +22,7 @@ try:
         else:
             print(f"{word}: unavailable")
         count += 1
-        print(str(count) + '/' + str(len(words)) + 'complete. ' + str(len(free)) + ' names found.')
+        print(f"{count}/{len(words)} complete. {len(free)} names found.")
 except KeyboardInterrupt:
     writefree()
     raise SystemExit
