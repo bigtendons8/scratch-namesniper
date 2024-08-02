@@ -1,11 +1,12 @@
 
 import requests
 
-with open("list.txt", "r") as file:
-    words = file.read().strip().split("\n")
-
 
 def main():
+    with open("list.txt", "r") as file:
+        words = file.read().strip().split("\n")
+
+
     def writefree():
         with open('output.txt', 'w') as file:
             file.writelines(free)
