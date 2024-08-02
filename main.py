@@ -10,13 +10,13 @@ def main():
         with open('output.txt', 'w') as file:
             file.writelines(free)
 
-    link = 'https://api.scratch.mit.edu/accounts/checkusername/'
+    LINK = 'https://api.scratch.mit.edu/accounts/checkusername/'
     free = []
     s = requests.Session()
 
     try:
         for count, word in enumerate(words):
-            r = s.get(link + word)
+            r = s.get(LINK + word)
             if r.json()['msg'] == 'valid username':
                 print(f"{word}: available")
                 free.append(f"{word}\n")
