@@ -7,7 +7,9 @@ free = []
 s = requests.Session()
 
 with open("list.txt", "r") as file:
-    words = file.read().split("\n")
+    words = file.read().strip().split("\n")
+
+print(words)
 
 def writefree():
     with open('output.txt', 'w') as file:
