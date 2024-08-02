@@ -6,11 +6,11 @@ count = 0
 free = []
 s = requests.Session()
 
-with open("list", "r") as file:
+with open("list.txt", "r") as file:
     words = file.read().split("\n")
 
 def writefree():
-    with open('output', 'w') as file:
+    with open('output.txt', 'w') as file:
         file.writelines(free)
 
 try:
