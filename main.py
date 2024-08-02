@@ -1,11 +1,6 @@
 
 import requests
 
-link = 'https://api.scratch.mit.edu/accounts/checkusername/'
-count = 0
-free = []
-s = requests.Session()
-
 with open("list.txt", "r") as file:
     words = file.read().strip().split("\n")
 
@@ -16,6 +11,11 @@ def writefree():
 
 
 def main():
+    link = 'https://api.scratch.mit.edu/accounts/checkusername/'
+    count = 0
+    free = []
+    s = requests.Session()
+
     try:
         for word in words:
             r = s.get(link + word)
